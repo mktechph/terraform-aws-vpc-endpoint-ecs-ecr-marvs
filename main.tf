@@ -41,7 +41,7 @@ resource "aws_vpc_endpoint" "ecs_telemetry_endpoint" {
 
 resource "aws_vpc_endpoint" "ecr_api_endpoint" {
   vpc_id            = var.vpc_id
-  service_name      = "com.amazonaws.${data.aws_region.current.name}.ecr_api"
+  service_name      = "com.amazonaws.${data.aws_region.current.name}.ecr-api"
   vpc_endpoint_type = "Interface"
 
   subnet_ids = var.ecr_api_endpoint_subnet_id
@@ -53,7 +53,7 @@ resource "aws_vpc_endpoint" "ecr_api_endpoint" {
 
 resource "aws_vpc_endpoint" "ecr_dkr_endpoint" {
   vpc_id            = var.vpc_id
-  service_name      = "com.amazonaws.${data.aws_region.current.name}.ecr_dkr"
+  service_name      = "com.amazonaws.${data.aws_region.current.name}.ecr-dkr"
   vpc_endpoint_type = "Interface"
 
   subnet_ids = var.ecr_dkr_endpoint_subnet_id
