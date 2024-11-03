@@ -69,7 +69,6 @@ resource "aws_vpc_endpoint" "s3_endpoint" {
   service_name      = "com.amazonaws.${data.aws_region.current.name}.s3"
   vpc_endpoint_type = "Gateway"
 
-  subnet_ids = var.ecr_dkr_endpoint_subnet_id
   #security_group_ids = [
   #  aws_security_group.sg1.id,
   #]
