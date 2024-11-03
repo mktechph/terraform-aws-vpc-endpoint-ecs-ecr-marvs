@@ -19,5 +19,5 @@ output "output_ecr_dkr_endpoint_id" {
 }
 
 output "output_s3_endpoint_id" {
-  value = aws_vpc_endpoint.s3_endpoint[count.index].id
+  value = var.ecr_api_endpoint_subnet_id != null ? aws_vpc_endpoint.s3_endpoint[0].id : null
 }
