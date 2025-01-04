@@ -39,3 +39,35 @@ variable "ecr_dkr_endpoint_subnet_id" {
   type        = list(string)
   default     = null
 }
+
+
+
+variable "sg_ecs_endpoint" {
+  description = "The Security Group ID(s) to attach to ECS Endpoint."
+  type        = list(string)
+  default     = null
+}
+
+variable "sg_ecs_agent_endpoint" {
+  description = "The Security Group ID(s) to attach to ECS Agent Endpoint."
+  type        = list(string)
+  default     = null
+}
+
+variable "sg_ecs_telemetry_endpoint" {
+  description = "The Security Group ID(s) to attach to ECS Teelemtry Endpoint."
+  type        = list(string)
+  default     = null
+}
+
+variable "sg_ecr_api_endpoint" {
+  description = "The Security Group ID(s) to attach to ECR Endpoint."
+  type        = list(string)
+  default     = null
+}
+
+variable "sg_ecr_dkr_endpoint" {
+  description = "The Security Group ID(s) to attach to ECR DKR Endpoint."
+  type        = list(string)
+  default     = null
+}
