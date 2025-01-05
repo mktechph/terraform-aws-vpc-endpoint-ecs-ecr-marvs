@@ -8,6 +8,8 @@ resource "aws_vpc_endpoint" "ecs_endpoint" {
   subnet_ids         = var.ecs_endpoint_subnet_id
   security_group_ids = var.sg_ecs_endpoint
 
+  private_dns_enabled = true
+
   tags = var.endpoint_tags
 }
 
@@ -19,6 +21,8 @@ resource "aws_vpc_endpoint" "ecs_agent_endpoint" {
 
   subnet_ids         = var.ecs_agent_endpoint_subnet_id
   security_group_ids = var.sg_ecs_agent_endpoint
+
+  private_dns_enabled = true
 
   tags = var.endpoint_tags
 }
@@ -32,6 +36,8 @@ resource "aws_vpc_endpoint" "ecs_telemetry_endpoint" {
   subnet_ids         = var.ecs_telemetry_endpoint_subnet_id
   security_group_ids = var.sg_ecs_telemetry_endpoint
 
+  private_dns_enabled = true
+
   tags = var.endpoint_tags
 }
 
@@ -44,6 +50,8 @@ resource "aws_vpc_endpoint" "ecr_api_endpoint" {
   subnet_ids         = var.ecr_api_endpoint_subnet_id
   security_group_ids = var.sg_ecr_api_endpoint
 
+  private_dns_enabled = true
+
   tags = var.endpoint_tags
 }
 
@@ -54,6 +62,8 @@ resource "aws_vpc_endpoint" "ecr_dkr_endpoint" {
 
   subnet_ids         = var.ecr_dkr_endpoint_subnet_id
   security_group_ids = var.sg_ecr_dkr_endpoint
+
+  private_dns_enabled = true
 
   tags = var.endpoint_tags
 }
